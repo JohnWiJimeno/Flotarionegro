@@ -13,7 +13,27 @@
         <button v-if="!is_auth" v-on:click="loadSignUp" > Registrarse </button>
       </nav>
     </div>
+
+    <nav v-if="is_auth" class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#" v-on:click="loadHome">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" v-on:click="loadConductor">Conductor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" v-on:click="loadInformation">Informacion</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     
+
+
 
     <div class="main-component">
       <router-view  
@@ -84,6 +104,10 @@ export default {
 
     loadHome: function() {
       this.$router.push({ name: "home" });
+    },
+
+    loadConductor: function() {
+      this.$router.push({ name: "conductor" });
     },
 
     logOut: function () {

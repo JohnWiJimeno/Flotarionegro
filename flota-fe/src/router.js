@@ -5,6 +5,8 @@ import LogIn from './components/LogIn.vue'
 import SignUp from './components/SignUp.vue'
 import Home from './components/Home.vue'
 
+import Conductor from './components/Conductor.vue'
+
 const routes = [{
         path: '/',
         name: 'root',
@@ -24,6 +26,11 @@ const routes = [{
         path: '/user/home',
         name: "home",
         component: Home
+    },
+    {
+        path: '/user/conductor',
+        name: "conductor",
+        component: Conductor
     }
 
 ];
